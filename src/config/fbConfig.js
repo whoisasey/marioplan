@@ -14,7 +14,6 @@ import 'firebase/auth';
     measurementId: "G-1DXT5XBJYJ"
   };
   firebase.initializeApp(config);
-
 	firebase.firestore().settings({timestampsInSnapshots: true})
 
 	export default firebase;
