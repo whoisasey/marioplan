@@ -12,7 +12,7 @@ import 'firebase/auth';
     messagingSenderId: "822754140452",
     appId: "1:822754140452:web:07b8b6aac15201361693b1",
     measurementId: "G-1DXT5XBJYJ"
-  };
+    };
   firebase.initializeApp(config);
 	firebase.firestore().settings({timestampsInSnapshots: true})
 
