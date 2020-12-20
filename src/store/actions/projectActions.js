@@ -3,12 +3,15 @@ export const createProject = (project) => {
 		// make async call to db
 		const firestore = getFirestore();
 		// this will add a new document to our firestore
+		const profile = getState().firebase.profile;
+		const authorId = getState().firebase.auth.uid;
+
 		firestore.collection('projects').add({
 			// this whole document will be added to our collection
 			...project,
-			authorFirstName: 'Vik',
-			authorLastName: 'Chai',
-			authorId: 4632,
+			authorFirstName: profile.firstName,
+			authorLastName: profile.lastName,
+			authorId,
 			createdAt: new Date()
 		}).then(() => {
 			// when the document is added, dispatch this method

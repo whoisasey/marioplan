@@ -20,6 +20,7 @@ class CreateProject extends Component {
 		e.preventDefault();
 		// console.log(this.state)
 		this.props.createProject(this.state) //this is passed to mapDispatchToProps as the project
+		this.props.history.push('/')
 	}
 	render() {
 		const {auth} = this.props;
